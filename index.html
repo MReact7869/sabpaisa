@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+</head>
+
+
+    <body>
+        <header class="header">
+            <img src="logo.svg" />
+            <span class="header-text">Welcome back</span>
+            <div class="align-end">
+            <span class="header-text" style="margin-right:60px;">Merchant ID: 14662</span>
+            <span class="bell-icon">
+                <img src="bell.svg" alt="bell-icon" />
+            </span>
+            <span class="user">
+                <img src="Vector.svg" alt="vector">
+                <span>Hello, Vikaram</span>
+            </span>
+        </div>
+        </header>
+        <div class="d-flex">
+        <div class="d-flex flex-column flex-shrink-0  sidebar">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                    <img src="dashboard.svg" width="28" height="28"/>
+                  <!-- <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg> -->
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="kyc.svg" width="28" height="28"/>
+                  Complete KYC
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="integration.svg" width="28" height="28"/>
+                  Intregration kit
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="catlog.svg" width="28" height="28"/>
+                  Products Catalog
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="transaction.svg" width="28" height="28"/>
+                  Transaction history
+                </a>
+              </li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="settle.svg" width="28" height="28"/>
+                Settlement report
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="refund.svg" width="28" height="28"/>
+                  Refund txn history
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="chargeback.svg" width="28" height="28"/>
+                  Chargeback txn history
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="enquiry.svg" width="28" height="28"/>
+                 Transaction enquiry
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="transaction summary.svg" width="28" height="28"/>
+                 Transaction summary
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                    <img src="faq.svg" width="28" height="28"/>
+                  FAQ /Help
+                </a>
+              </li>
+            </ul>
+           
+            
+        </div>
+        
+        <div class="content">
+            <div class="topbar">
+                <span style="font-size: 28px; line-height:32px">All Transaction</span>
+                <span >
+                    <button type="button" class="select-period" style="margin-right:25px;">Select period</button>
+                    <button type="button" class="filter" >Filter</button>
+                </span>
+            </div>
+            <div class="card-data">
+            <span style="position: relative;">
+                <img src="card1.svg"/>
+                <span class="centered">Total income</span>
+                
+            </span>
+            <span style="position: relative;">
+                <img src="card2.svg"/>
+                <span class="centered">Success Rate </span>
+                
+            </span>
+            <span style="position: relative;">
+                <img src="card3.svg"/>
+                <span class="centered">New transaction today</span>
+                
+            </span>
+            <span style="position: relative;">
+                <img src="card4.svg"/>
+                <span class="centered">Completed transaction</span>
+                
+            </span>
+            </div>
+
+        <div class="d-flex chart-data">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            <div class="card donut">
+                <div class="card-body">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+        </div>
+            
+       
+        </div>
+    </div>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+    
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Jan', 'Feb', 'March', 'Apr', 'May', 'June', 'July', 'August', 'Sep', 'Oct', 'Nov', 'Dec'],
+          datasets: [{
+            label: 'Amount per Months',
+            data: [12, 19, 3, 5, 2, 3,15, 13, 13, 8, 4, 3],
+            borderWidth: 1,
+            backgroundColor: '#1A9CED',
+            borderRadius: 15,
+            
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              display: true, 
+                grid: {
+                    display: false 
+                }
+            },
+            x: {
+              beginAtZero: true,
+              display: true, 
+                grid: {
+                    display: false 
+                }
+              
+            }
+          }
+        }
+      });
+    </script>
+
+    <script>
+        // Get the canvas element by its id
+        var ctx1 = document.getElementById('donutChart').getContext('2d');
+    
+        // Define data for the chart
+        var data = {
+            labels: ['Red', 'Blue', 'Yellow'],
+            datasets: [{
+                data: [30, 40, 30], // Example data values
+                backgroundColor: ['red', 'blue', 'yellow'],
+                borderJoinStyle: 'miter'
+            }]
+        };
+    
+        // Define options for the chart
+        var options = {
+            cutoutPercentage: 20, // Adjust this to control the size of the hole in the donut
+            responsive: true,
+            maintainAspectRatio: false
+        };
+    
+        // Create a donut chart
+        var donutChart = new Chart(ctx1, {
+            type: 'doughnut',
+            data: data,
+            options: options
+        });
+    </script>
+    
+</html>

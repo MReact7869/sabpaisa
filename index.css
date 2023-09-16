@@ -1,0 +1,161 @@
+body{
+    font-family: 'sofio-pro';
+}
+
+:root {
+    --white-background-color: #FFFFFF;
+    
+}
+
+.header {
+    background-color: var(--white-background-color);
+    display: flex;
+    align-items: center;
+   
+}
+.header > img {
+    margin: 32px 48px;
+
+}
+.bell-icon{
+    border: 1px solid #D0E4FF;
+    border-radius: 50% 50%;
+    width :50px;
+    height: 50px;
+    /* margin: 0px !important; */
+    padding: 11px 12px 12px 11px;
+    margin-right:70px;
+}
+.user{
+    border: 1px solid #D0E4FF;
+    border-radius: 7px;
+    width: 170px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px; 
+    margin-right: 100px; 
+ 
+     
+}
+.user img{
+    margin-right:10px ;
+}
+.user > span {
+    font-size: 18px;
+    line-height: 11px;
+    white-space: nowrap;
+}
+.align-end{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+.sidebar {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 70vh;
+    opacity: 1;
+    
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #1A9CED;;
+    background-color: #EFF2FF;
+}
+.nav-pills .nav-link {
+    background: 0 0;
+    border: 0;
+    border-radius: 20px 0px 0px 20px;
+    font: normal normal normal 19px/19px Sofia Pro;
+    letter-spacing: 0px;
+    color: #414141;
+    padding: 10px 20px;
+}
+.nav-pills .nav-link:nth-child(2) {
+    border-radius: 20px 20px 20px 20px;
+  }
+
+.content {
+    background-color: #EFF2FF;
+    width: 100%; 
+    overflow-x: hidden;
+    padding: 20px;
+    
+}
+.content .card {
+    width: 780px;
+    height:400px;
+    margin-right: 35px;
+   
+    
+}
+.content .card.donut{
+    width: 300px;
+    height:400px;
+}
+.card-data {
+    padding: 10px;
+   
+
+}
+.card-data img{
+    width: 280px;
+    padding-right: 20px;
+}
+.chart-data{
+    padding: 10px;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 40px;
+}
+.select-period {
+width: 120px;
+height: 35px;
+background: #377CCF;
+border-radius: 5px;
+opacity: 1;
+font: normal normal normal 16px/23px Sofia Pro;
+letter-spacing: 0px;
+color: #FFFFFF;
+border: none;
+
+}
+.filter{
+width: 120px;
+height: 35px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 0.800000011920929px solid #E1E1E1;
+border-radius: 4px;
+opacity: 1;
+color: #222222;
+border: none;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 16px;
+  }
+.centered-sub{
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -20%);
+    color: #FFFFFF;
+    font-size: 12px;
+  }
+  .header-text{
+    white-space: nowrap;
+    font-size: 20px;
+    line-height: 11px;
+letter-spacing: 0px;
+color: #212121;
+  }
